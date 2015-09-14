@@ -1,0 +1,9 @@
+{
+    "name" : "revibot",
+    "title" : "Revibot",
+    "description" : "Revibot, the super lazy bot.",
+    "url" : "https://tools.wmflabs.org/revibot/",
+    "keywords" : "tools, bot",
+    "author" : "Yongmin Hong",
+    "repository" : "https://github.com/revi/revibot"
+}
