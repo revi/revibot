@@ -3,10 +3,10 @@
 import sys, pywikibot
 from pywikibot import pagegenerators
 from pywikibot.compat import catlib
-import editarticle, time, os
+import time, os
 import re, codecs, gc, threading
  
-site = pywikibot.getSite()
+site = pywikibot.Site('ko')
 err_cnt = 0
 
 def main():
@@ -125,7 +125,7 @@ def pageparse(page,regex):
     text = re.sub('\{\{'+regex+'(.*?)\}\}',u"{{의견 요청 오류}}",text)
     page.put(text,u"의견 요청 오류")
     err_cnt = err_cnt + 1
-    print "ERROR COUNT:", err_cnt
+    print("ERROR COUNT:", err_cnt)
     gc.collect() 
     return '',''
  
@@ -134,4 +134,3 @@ if __name__ == '__main__':
     main()
   finally:
     pywikibot.stopme()
-</source>
