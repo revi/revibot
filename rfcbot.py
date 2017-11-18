@@ -68,7 +68,7 @@ class update(threading.Thread):
             for page in pages:
                 Time, line = pageparse(page, regex)
                 dic[Time] = line
-            keys = dic.keys()
+            keys = list(dic.keys())
             keys.sort(reverse=True)
             for key in keys:
                 message += u'%s' % dic[key]
