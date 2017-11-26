@@ -138,7 +138,7 @@ def pageparse(page, regex):
             page.put(text, comment=u'오래된 의견 요청 제거')
             err_cnt = err_cnt + 1
             gc.collect()
-            return '', ''
+            return 0, ''
         message = u'%s%s' % (link, reason)
         message = re.sub('&#124;', '|', message)
         gc.collect()
@@ -150,7 +150,7 @@ def pageparse(page, regex):
         err_cnt = err_cnt + 1
         print("ERROR COUNT:", err_cnt)
         gc.collect()
-        return '', ''
+        return 0, ''
 
 
 if __name__ == '__main__':
