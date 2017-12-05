@@ -7,7 +7,7 @@ import pywikibot
 import MySQLdb
 conn = MySQLdb.connect(
     read_default_file = "/data/project/revibot/replica.my.cnf",
-    host = "kowiki.labsdb",
+    host = "kowiki.analytics.db.svc.eqiad.wmflabs",
     db = "kowiki_p",
 )
 
