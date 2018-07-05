@@ -20,14 +20,14 @@ def main():
             update(
                 [u"의견 요청"],
                 u"틀:의견 요청 목록",
-                u"이 문서는 봇에 의해 갱신되고 있습니다. [[분류:위키백과 틀|{{PAGENAME}}]]").start()
+                u"{{설명문서}}").start()
             gc.collect()
             time.sleep(300)
     else:
         update(
             [u"의견 요청"],
             u"틀:의견 요청 목록",
-            u"이 문서는 봇에 의해 갱신되고 있습니다. [[분류:위키백과 틀|{{PAGENAME}}]]").start()
+            u"{{설명문서}}").start()
         gc.collect()
 
 
