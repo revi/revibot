@@ -8,7 +8,7 @@ pywikibot.output(u'\nScript started.')
 
 import MySQLdb
 conn = MySQLdb.connect(
-    read_default_file = "/data/project/sbot/replica.my.cnf",
+    read_default_file = "/data/project/revibot-ii/replica.my.cnf",
     host = "kowiki.analytics.db.svc.eqiad.wmflabs",
     db = "kowiki_p",
 )
