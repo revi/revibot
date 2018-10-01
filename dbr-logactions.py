@@ -3,6 +3,9 @@
 
 import urllib
 import pywikibot
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 pywikibot.output(u'\nScript started.')
 
@@ -16,7 +19,7 @@ conn = MySQLdb.connect(
 # -------------------- Header -------------------- #
 pywikibot.output(u'\nLoding header...')
 
-text = '{{단축|백:기록목록}}\[[특:기록|공개 기록]]별 사용자 목록입니다. 마지막 갱신 ~~~~~.\n__TOC__\n\n'
+text = '{{단축|백:기록목록}}\n[[특:기록|공개 기록]]별 사용자 목록입니다. 마지막 갱신 ~~~~~.\n__TOC__\n\n'
 
 # -------------------- QUERY 1 - Deletions -------------------- #
 pywikibot.output(u'\nDoing query 1...')
