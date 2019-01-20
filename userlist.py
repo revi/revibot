@@ -114,7 +114,7 @@ FROM user u
 INNER JOIN user_groups g ON u.user_id=g.ug_user
 LEFT JOIN user_daily_contribs dc ON u.user_id=dc.user_id
 WHERE
-	g.ug_group IN ('sysop','checkuser','bureaucrat','OTRS-member')
+	g.ug_group IN ('sysop','checkuser','bureaucrat','interface-admin')
 	AND (SELECT count(*) from user_groups gg WHERE u.user_id=gg.ug_user AND gg.ug_group='sysop')=1
 GROUP BY user_name
 HAVING 12months<100 AND 24months<200
@@ -162,7 +162,8 @@ for row in table:
 		else:
 				rowtext+=' '
 		if re.search('oversight', row[3]): rowtext+='<abbr title="Oversight" style="color:blue">O</abbr>'
-		if re.search('checkuser', row[3]): rowtext+='<abbr title="Translation admin" style="color:blue">C</abbr>'
+		if re.search('checkuser', row[3]): rowtext+='<abbr title="CheckUser" style="color:blue">C</abbr>'
+		if re.search('interface-admin', row[3]): rowtext+='<abbr title="Interface-admin" style="color:blue">IA</abbr>'
 
 		if row[4]=="None":
 				rowtext+="||align=center|<div style='color:silver'>"+row[4]+"</div>"
@@ -173,7 +174,7 @@ for row in table:
 						ocount+=1
 						rowtext=rowtext.format(ocount)
 						oreport+=rowtext
-		elif re.search("bot", row[3]) or re.search("[\s\-]bot|\bbot|bot\b|Bot| AWB|Delinker|Wikimedia Commons",row[0]):
+		elif re.search("bot", row[3]) or re.search("[\s\-]bot|\bbot|bot\b|Bot| AWB|봇|환영합니다",row[0]):
 				bcount+=1
 				rowtext=rowtext.format(bcount)
 				breport+=rowtext
@@ -189,7 +190,7 @@ areport = ""
 hreport=u'''{{User:Revibot/list}}
 Report last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY}}
 
-Total number of [[#top|users active]] in the last 30 days on Korean  with more than 10,000 edits is ''' + "{:,d}".format(count) + ''', there are [[#bots|''' + str(bcount) + ''' active bots]] and ''' + str(ocount) +''' [[#lostusers|recently inactive users]].<!--and [[#admins|? administrators]] with low activity over two years.-->
+Total number of [[#top|users active]] in the last 30 days on Korean Wikipedia with more than 10,000 edits is ''' + "{:,d}".format(count) + ''', there are [[#bots|''' + str(bcount) + ''' active bots]] and ''' + str(ocount) +''' [[#lostusers|recently inactive users]].<!--and [[#admins|? administrators]] with low activity over two years.-->
 '''
 
 
