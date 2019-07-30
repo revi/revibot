@@ -4,4 +4,4 @@
 # Login is handled by BotPassword.
 
 cd core # Go to pywikibot core
-python pwb.py clean_sandbox -delay:5 # Actual scripts - clean the sandbox.
+python3 pwb.py clean_sandbox -delay:5 # Actual scripts - clean the sandbox.
