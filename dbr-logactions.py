@@ -28,7 +28,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'delete'
@@ -53,7 +53,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'delete'
@@ -78,7 +78,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'delete'
@@ -103,7 +103,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'delete'
@@ -128,7 +128,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'protect'
@@ -153,7 +153,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'protect'
@@ -178,7 +178,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'protect'
@@ -203,7 +203,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'block'
@@ -228,7 +228,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'block'
@@ -253,7 +253,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'block'
@@ -278,7 +278,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'renameuser'
@@ -303,7 +303,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'rights'
@@ -329,7 +329,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'gblblock'
@@ -354,7 +354,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'gblblock'
@@ -380,7 +380,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'abusefilter'
@@ -405,7 +405,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'merge'
@@ -429,7 +429,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'import'
@@ -453,7 +453,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'managetags'
@@ -477,7 +477,7 @@ cursor = conn.cursor()
 cursor.execute("""SELECT
 user_name AS user,
 COUNT(log_timestamp) AS  ucount
-FROM logging
+FROM logging_compat
 JOIN user
 ON user_id = log_user
 WHERE log_type = 'massmessage'
