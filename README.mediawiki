@@ -4,8 +4,13 @@ Non-standard Pywikibot revibot codes.
 
 === Which bot is running which things? ===
 
-Revibot II is running unblock.py.
-Revibot II will be running rfcbot.py.
+* Revibot runs items in periodic-items/.
+* Revibot I runs nothing in this list.
+* Revibot II runs following codes:
+** community_portal_list.py
+** rfcbot.py
+** dbr-logactions.py
+* Revibot III runs nothing in this list.
 
 === LICENSE ===
 
