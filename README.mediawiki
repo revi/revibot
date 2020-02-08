@@ -4,6 +4,8 @@ Non-standard Pywikibot revibot codes.
 
 === Which bot is running which things? ===
 
+You might want to check for the bot status at status.md.
+
 * Revibot runs items in periodic-items/.
 * Revibot I runs nothing in this list.
 * Revibot II runs following codes:
