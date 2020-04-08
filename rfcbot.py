@@ -74,12 +74,12 @@ class update(threading.Thread):
                 message += u'%s' % dic[key]
         else:
             message = u'* 목록에 토론이 없습니다.'
-        pagetext = u"'''아래의 토론들은 여러 편집자의 참여와 관심을 필요로 하고 있습니다.'''\n----\n<onlyinclude>%s\n</onlyinclude>\n%s" % (
+        pagetext = u"{{의견 요청 목록/안내문}}\n----\n<onlyinclude>%s\n</onlyinclude>\n%s" % (
             message, bottomtxt)
         templatepage = pywikibot.Page(site, '%s' % post_template)
         templatepage.put(
             pagetext,
-            comment=u'수정, 현재 %s 개의 토론이 있습니다.' % str(
+            comment=u'봇) (수정, 현재 %s 개의 토론이 있습니다.' % str(
                 len(pages) - err_cnt))
         pywikibot.output(
             'Update, %s current discussions\n Sleeping for 5 minutes' % str(
@@ -135,7 +135,7 @@ def pageparse(page, regex):
             link = u'\n* [[%s]] ' % page.title()
         if Time < (time.time() - 2592000):
             text = re.sub('\{\{' + regex + '(.*?)\}\}', '', text)
-            page.put(text, comment=u'오래된 의견 요청 제거')
+            page.put(text, comment=u'봇) (오래된 의견 요청 제거')
             err_cnt = err_cnt + 1
             gc.collect()
             return 0, ''
@@ -146,7 +146,7 @@ def pageparse(page, regex):
     except BaseException:
         text = page.get()
         text = re.sub('\{\{' + regex + '(.*?)\}\}', u"{{의견 요청 오류}}", text)
-        page.put(text, u"의견 요청 오류")
+        page.put(text, u"봇) (의견 요청 오류")
         err_cnt = err_cnt + 1
         print("ERROR COUNT:", err_cnt)
         gc.collect()
