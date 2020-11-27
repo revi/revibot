@@ -4,8 +4,9 @@
 import urllib
 import pywikibot
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+import importlib
+importlib.reload(sys)
+# sys.setdefaultencoding('utf-8')
 
 pywikibot.output(u'\nScript started.')
 
