@@ -56,10 +56,8 @@ class update(threading.Thread):
                 part = '|'
             regex += ')'
         for template in templates:
-            pagegen = pagegenerators.ReferringPageGenerator(
-                pywikibot.Page(
-                    site, u'틀:%s' %
-                    template), onlyTemplateInclusion=True)
+            pagegen = pywikibot.Page(site, u'틀:%s' % template)
+                .getReferences(only_template_inclusion=True)
             for page in pagegen:
                 pages.append(page)
         pages = sorted(set(pages))
