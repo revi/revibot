@@ -1,6 +1,8 @@
 #!/home/sigma/.local/bin/python3
 # -*- coding: utf-8 -*-
 # LGPLv2+ license, look it up
+# SPDX-License-Identifier: LGPL-2.0-or-later
+
 
 import re
 import builtins

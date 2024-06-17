@@ -11,6 +11,7 @@
 	2016-05
 	Move to pywikibot-core after WMF decided to stop supporting http redirection
 # CC-BY-SA-4.0
+# SPDX-License-Identifier: CC-BY-SA-4.0
 """
 status = "Almost full working again, query takes an awfully long time to run. A WMF decision at the end of 2015 to delete table ''user_daily_contribs'' forced a significant rewrite of the queries behind this report, meaning it can take hours and many queries rather than taking seconds to produce. See ([[Phab:T115711]])."
 
@@ -48,7 +49,7 @@ cursor = conn.cursor()
 redits = [10000, 11000, 12000, 13000, 14000, 15000, 17000, 19000, 21000, 25000,
 	29000, 33000, 37000, 41000, 45000, 50000,
 	55000, 60000, 65000, 70000, 80000, 90000,
-	100000, 110000, 120000, 140000, 160000, 180000 
+	100000, 110000, 120000, 140000, 160000, 180000
 	]
 for r in range(200000, 10050000, 50000):
 	redits.append(r)
@@ -70,7 +71,7 @@ for r in range(len(redits)-1):
 		table.append([user, int(editcount), last_edit[0:8], '.'.join(groups), str(reg)[0:4], block, user_id])
 
 query = """
-SELECT 
+SELECT
 	GROUP_CONCAT(DISTINCT ug_group SEPARATOR ' ') AS groups,
 	CONCAT(ipb_expiry, ' &mdash; ', ipb_reason) AS block
 FROM user_groups

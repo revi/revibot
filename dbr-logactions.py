@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+# SPDX-License-Identifier: CC-BY-SA-3.0
 
 import urllib
 import pywikibot
@@ -501,7 +502,7 @@ text += u'|}\n'
 #
 # text += u'== Upload log ==\n'
 # text += u'See [[Commons:Database reports/Upload log stats]]\n'
-# 
+#
 # -------------------- END QUERYS -------------------- #
 pywikibot.output(u'\nPublishing page now...\n')
 

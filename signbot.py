@@ -4,6 +4,7 @@
 # Published by zhuyifei1999 (https://wikitech.wikimedia.org/wiki/User:Zhuyifei1999)
 # under the terms of Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 # https://creativecommons.org/licenses/by-sa/3.0/
+# SPDX-License-Identifier: CC-BY-SA-3.0
 
 import os
 import re
@@ -143,14 +144,14 @@ class BotThread(threading.Thread):
                         if excluderegextest is not None:
                             self.output(u"%s -- ignored" % excluderegextest)
                             return
-                               
+
                         if self.isComment(line):
                             tosignnum = j
                             tosignstr = line
                             if self.isSigned(user, tosignstr):
                                 self.output(u"Signed")
                                 return
-                        
+
         if tosignstr is False:
             self.output(u"No inserts")
             return
@@ -171,9 +172,9 @@ class BotThread(threading.Thread):
         else:
             self.output(u"Line no longer found, probably signed")
             return
-        
+
         summary = u'Signing comment by %s - "%s"' % (self.userlink(user), self.change['comment'])
-        
+
         self.userPut(self.page, self.page.get(), u"\n".join(currenttext), comment=summary)
 
         # self.notify(user) {{subst:Please sign}} -- ignore {{bots}}
@@ -222,7 +223,7 @@ class BotThread(threading.Thread):
                 if link.namespace not in [2, 3]: continue
                 if link.title != user.username: continue
             return True
-                                                                                                
+
         return False
 
     def isComment(self, line):
@@ -231,7 +232,7 @@ class BotThread(threading.Thread):
         if tempstr.startswith('=') and tempstr.endswith('='): return False # not heading
         if tempstr.startswith('|') or tempstr.startswith('{|') or tempstr.endswith('|'): return False # not table/template
         if tempstr.startswith('----'): return False # not horzontal line
-        if re.match(ur'^__[A-Z]+__$', tempstr): return False # not magic words   
+        if re.match(ur'^__[A-Z]+__$', tempstr): return False # not magic words
 
         return True
 

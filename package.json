@@ -16,7 +16,7 @@
     "url": "git+https://github.com/revi/revibot.git"
   },
   "author": "Yongmin Hong (https://revi.xyz/)",
-  "license": "Apache-2.0",
+  "license": "GPL-2.0-or-later",
   "bugs": {
     "url": "https://github.com/revi/revibot/issues"
   },

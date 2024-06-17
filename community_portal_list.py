@@ -1,6 +1,7 @@
 # -*- coding: utf-8  -*-
 # License: CC BY SA 3.0 Unported / GFDL
 # Source: https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9A%A9%EC%9E%90:Kwanin-bot/script
+# SPDX-License-Identifier: CC-BY-SA-3.0 OR GFDL-1.3-or-later
 
 import random
 import pywikibot
@@ -46,14 +47,14 @@ def main():
         (u'번역 필요', u'분류:번역되지 않은 문장이 포함된 문서'),
         (u'기계 번역', u'분류:모든 기계 번역 의심 문서‎'),
         ]
-    
+
     #stub_list = cat_list_rec(u'분류:토막글 분류', stub_ignore_cats)
-    
+
     data = []
 
     for title, catname in cats:
         data.append((title, catname, cat_list(catname)))
-    
+
     result = u""
     result += u"다음과 같은 문서들이 사용자 여러분들의 편집을 필요로 하고 있습니다.\n"
     result += u"<!-- 이 문서의 목록은 봇을 통해 자동으로 변경됩니다. -->\n"
@@ -63,14 +64,14 @@ def main():
     for title, catname, lis in data:
         result += u"""* '''[[:%s|%s]]''': """%(catname, title)
         result += u", ".join([u"[[%s]]"%i for i in list_shuffle(lis, count)]) + u"\n"
-    
+
     page = pywikibot.Page(pywikibot.Site(), u'위키백과:사용자 모임/자동목록')
     page.put(result, u"봇:자동목록 갱신")
-    
+
     print (result)
     #print ("# of stubs:", len(stub_list))
     for i, m, j in data:
         print ("# of %s"%i, len(j))
-    
+
 if __name__ == "__main__":
     main()

@@ -1,4 +1,5 @@
 # Licensed under GFDL/CC BY SA 3.0 (Wikipedia License!)
+# SPDX-License-Identifier: GFDL-1.3-or-later OR CC-BY-SA-3.0
 # -*-  coding: utf-8  -*-
 import sys
 import pywikibot
@@ -14,8 +15,9 @@ err_cnt = 0
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "-d":
-        # 서버에서 무한 반복으로 돌릴 때에는 아래를 사용: | Use below when running infinitely
-        # running mode in the server (note:probably cron)
+        # 서버에서 무한 반복으로 돌릴 때에는 아래를 사용:
+        # Use below when running infinitely
+        # running mode in the server
         while 1 < 2:
             update(
                 [u"의견 요청"],

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # This script is not licensed under LICENSE file and is ALL RIGHT RESERVED.
+# SPDX-License-Identifier: NONE
 
 import pywikibot
 
