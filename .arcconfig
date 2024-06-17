@@ -1,4 +1,4 @@
 {
-    "phabricator.uri": "https://bugs.revi.xyz/",
-    "repository.callsign": "REVIBOT"
+  "phabricator.uri": "https://issuetracker.revi.xyz/",
+  "load": [".pinterest-linters"]
 }

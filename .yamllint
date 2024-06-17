@@ -1,0 +1,25 @@
+---
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+  - '.yamllint'
+
+extends: default
+
+ignore-from-file: .gitignore
+
+rules:
+  comments-indentation: {}
+  document-start:
+    present: true
+    level: warning
+  line-length:
+    max: 80
+    level: warning
+  new-line-at-end-of-file:
+    level: warning
+  quoted-strings: disable
+  truthy:
+    level: warning
+    # on: included because GitHub Actions
+    allowed-values: ['on', 'true', 'false']

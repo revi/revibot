@@ -1,0 +1,80 @@
+{
+  "exclude": ["(^node_modules/)", "(^package-lock.json$)"],
+  "linters": {
+    "chmod": {
+      "type": "chmod"
+    },
+    "css": {
+      "type": "csslint",
+      "include": ["(\\.css$)"]
+    },
+    "Generated": {
+      "type": "generated"
+    },
+    "jshint": {
+      "type": "jshint",
+      "include": ["(\\.cjs$)", "(\\.js$)", "(\\.mjs$)", "(\\.ts$)"],
+      "jshint.jshintrc": ".jshintrc.json"
+    },
+    "json": {
+      "type": "json",
+      "include": [
+        "(^.arcconfig$)",
+        "(^.arclint$)",
+        "(^.arcunit$)",
+        "(^.imgbotconfig$)",
+        "(\\.json$)"
+      ],
+      "exclude": ["(^.vscode/)"]
+    },
+    "merge-conflict": {
+      "type": "merge-conflict"
+    },
+    "nolint": {
+      "type": "nolint"
+    },
+    "spelling": {
+      "type": "spelling"
+    },
+    "text": {
+      "type": "text",
+      "exclude": ["(^.gitignore$)", "(\\.md$)", "(\\.svg$)"],
+      "text.max-line-length": 80,
+      "severity": {
+        "1": "autofix",
+        "2": "advice",
+        "3": "advice",
+        "5": "disabled"
+      }
+    },
+    "text-markdown": {
+      "type": "text",
+      "include": ["(^.gitignore$)", "(\\.md$)"],
+      "severity": {
+        "1": "autofix",
+        "2": "advice",
+        "3": "disabled",
+        "5": "disabled"
+      }
+    },
+    "text-svg": {
+      "type": "text",
+      "include": ["(\\.svg$)"],
+      "severity": {
+        "1": "autofix",
+        "2": "advice",
+        "3": "disabled",
+        "4": "disabled",
+        "5": "disabled"
+      }
+    },
+    "xml": {
+      "type": "xml",
+      "include": ["(\\.svg$)", "(\\.xml$)"]
+    },
+    "yamlLint": {
+      "type": "yamllint",
+      "include": ["(\\.yaml$)", "(\\.yml$)", "(^.yamllint$)"]
+    }
+  }
+}

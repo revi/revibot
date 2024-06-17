@@ -1,0 +1,25 @@
+*        text=auto
+
+*.asc    binary
+*.gif    binary
+*.jpg    binary
+*.jpeg   binary
+*.mp3    binary
+*.mp4    binary
+*.png    binary
+*.webm   binary
+*.webp   binary
+*.woff2  binary
+
+*.css    diff=css
+*.html   diff=html
+*.md     diff=markdown
+*.php    diff=php
+*.py     diff=python
+*.rb     diff=ruby
+*.sh     diff=bash
+
+# GitHub Linguist detection
+# https://github.com/github-linguist/linguist/blob/master/docs/overrides.md
+.arclint linguist-language=json
+.yamllint linguist-language=yaml

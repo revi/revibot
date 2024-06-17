@@ -1,0 +1,24 @@
+{
+  "name": "@revi/revibot",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@revi/prettier-config": "^0.0.2",
+    "prettier": "^3.3.2"
+  },
+  "prettier": "@revi/prettier-config",
+  "scripts": {
+    "p:c": "prettier --check",
+    "p:w": "prettier --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revi/revibot.git"
+  },
+  "author": "Yongmin Hong (https://revi.xyz/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/revi/revibot/issues"
+  },
+  "homepage": "https://github.com/revi/revibot"
+}

@@ -1,0 +1,23 @@
+---
+name: JSON Lint
+on:
+  push:
+    paths:
+      - '**.json'
+  pull_request:
+    paths:
+      - '**.json'
+  merge_group:
+  workflow_dispatch:
+
+jobs:
+  jsonlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - name: Run JSON Lint
+        env:
+          REPORT_ONLY: true
+          SHOW_ERRORS: true
+        run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/json-lint/master/pipeline.sh)
