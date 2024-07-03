@@ -17,3 +17,6 @@ You might want to check for the bot status at status.md.
 ## LICENSE
 
 Each file has its corresponding `SPDX-License-Identifier`.
+
+`LICENSE` only applies to the file without `SPDX-License-Identifier` which differs
+from original license.

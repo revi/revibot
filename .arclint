@@ -1,5 +1,9 @@
 {
-  "exclude": ["(^node_modules/)", "(^package-lock.json$)"],
+  "exclude": [
+    "(^node_modules/)",
+    "(^package-lock.json$)",
+    "(^.pinterest-linters/)"
+  ],
   "linters": {
     "chmod": {
       "type": "chmod"
