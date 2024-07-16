@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "@revi/prettier-config": "^0.0.2",
-    "prettier": "^3.3.2"
+    "prettier": "^3.3.3"
   },
   "prettier": "@revi/prettier-config",
   "scripts": {
