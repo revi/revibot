@@ -78,7 +78,7 @@ class update(threading.Thread):
         templatepage = pywikibot.Page(site, '%s' % post_template)
         templatepage.put(
             pagetext,
-            comment=u'봇) (수정, 현재 %s 개의 토론이 있습니다.' % str(
+            summary=u'봇) (수정, 현재 %s 개의 토론이 있습니다.' % str(
                 len(pages) - err_cnt))
         pywikibot.output(
             'Update, %s current discussions\n Sleeping for 5 minutes' % str(
@@ -134,7 +134,7 @@ def pageparse(page, regex):
             link = u'\n* [[%s]] ' % page.title()
         if Time < (time.time() - 2592000):
             text = re.sub('\{\{' + regex + '(.*?)\}\}', '', text)
-            page.put(text, comment=u'봇) (오래된 의견 요청 제거')
+            page.put(text, summary=u'봇) (오래된 의견 요청 제거')
             err_cnt = err_cnt + 1
             gc.collect()
             return 0, ''
